@@ -1,0 +1,32 @@
+ansible-playbook -i hosts -vv playbook.yml
+
+Run this to run node manager:
+sudo /oracle/fmw12.2.1/config/Domains/custom_domain/bin/startNodeManager.sh >/dev/null 2>/dev/null &
+netstat -tulpn | grep LISTEN
+
+ansible-playbook playbook.yml -e managed_server_name=“RiteCommon” -e managed_server_port=‘7003’
+
+/oracle/fmw12.2.1/product/Oracle_Home/wlserver/common/bin/wlst.sh deploy.py
+
+grep -Ria managed_server_name /home/centos
+
+
+Note: if you get error while running the playbook
+
+TASK [node-manager : Waiting for nodemanager to come up] *******************************************************************************************************************
+task path: /home/centos/ansible-weblogic/roles/node-manager/tasks/main.yml:21
+fatal: [localhost]: FAILED! => {"changed": false, "elapsed": 90, "msg": "Timeout when waiting for 127.0.0.1:5556"}
+
+
+run this command manually 
+
+sudo /oracle/fmw12.2.1/config/Domains/custom_domain/bin/startNodeManager.sh >/dev/null 2>/dev/null &
+
+check port 5556 is open using 
+netstat -tulpn | grep LISTEN
+
+tcp6       0      0 127.0.0.1:5556          :::*                    LISTEN      -
+
+
+
+after rerun the ansible playbook 

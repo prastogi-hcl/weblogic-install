@@ -1,0 +1,2 @@
+myApp1,/oracle/fmw12.2.1/deployment/sample.war,managed_2,true
+myApp2,/oracle/fmw12.2.1/deployment/sample_2.war,managed_1,false

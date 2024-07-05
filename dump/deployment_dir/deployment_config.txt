@@ -1,0 +1,2 @@
+myApp1,/home/centos/weblogic-part2/deployment_dir/sample.war,managed_2
+myApp2,/home/centos/weblogic-part2/deployment_dir/sample_2.war,managed_1

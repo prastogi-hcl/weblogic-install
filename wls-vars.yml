@@ -1,0 +1,17 @@
+# Common paths and names
+middleware_home: '{{ oracle_base }}/product/Oracle_Home'
+middleware_common_home: '{{ middleware_home }}/oracle_common'
+domains_home: '{{ oracle_base }}/config/Domains'
+applications_home: '{{ oracle_base }}/config/applications'
+mw_installer_folder: '{{ oracle_base }}/installer'
+mw_deployment_folder: '{{ oracle_base }}/deployment'
+domain_home: '{{ domains_home }}/{{ domain_name }}'
+nodemanager_home: '{{ domain_home }}/nodemanager'
+weblogic_home: '{{ middleware_home }}/wlserver'
+nodemanager_username: 'manager'
+weblogic_admin: 'weblogic'
+admin_server_name: 'AdminServer'
+server_hostname: '{{ ansible_fqdn }}'
+# when do you want to deploy the app app_deplyment_flag should be true
+app_deplyment_flag: false
+weblogic_install: false
