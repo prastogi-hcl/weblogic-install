@@ -19,17 +19,17 @@ Oracle JDK 1.8.66
 
 **Configuration**
 
-Place Weblogic distributive to roles/fmw-software/files/fmw_12.2.1.0.0_wls
+Place Weblogic distributive to roles/fmw-software/files/fmw_12.1.3.0_wls
 
-Place JDK distributive to roles/linux-jdk/files/jdk-8u66-linux-x64.tar.gz
+Place JDK distributive to roles/linux-jdk/files/jdk-8u202-linux-x64.tar.gz
 
 Update the infra-vars.yml if required
 
 **# JDK installer and target folder**
 
-jdk_installation_archive: 'jdk-8u66-linux-x64.tar.gz'
+jdk_installation_archive: 'jdk-8u202-linux-x64.tar.gz'
 
-jdk_folder: '{{ oracle_base }}/jdk1.8.0_66'
+jdk_folder: '{{ oracle_base }}/jdk1.8.0_202'
 
 **# fmw installer**
 
