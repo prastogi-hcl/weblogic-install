@@ -1,6 +1,6 @@
 ---
-- name: Configure Oracle Linux 7 with WebLogic 12c R2 domain
-  hosts: weblogic
+- name: Configure Oracle Linux  with WebLogic 12c R2 domain
+  hosts: appservers
 # connection: local
   become: yes
   become_method: sudo
