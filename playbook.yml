@@ -27,8 +27,8 @@
     - role: start-admin-server
       sudo_user: '{{ oracle_user }}'
       #when: weblogic_install
-    - role: fmw-managed-server
-      sudo_user: '{{ oracle_user }}'
+ #   - role: fmw-managed-server
+ #     sudo_user: '{{ oracle_user }}'
       #when: weblogic_install
       #   - role: app-deployment
       #tags: deploy
