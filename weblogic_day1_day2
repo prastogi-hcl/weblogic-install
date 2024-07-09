@@ -1,0 +1,24 @@
+---
+- name: Monitor JVM Heap Size on WebLogic Servers
+  hosts: wlservers
+  tasks:
+    - name: Copy the JVM monitoring script to the remote server
+      copy:
+        src: monitor_jvm_heap.py
+        dest: /tmp/monitor_jvm_heap.py
+        mode: '0755'
+
+    - name: Execute the JVM monitoring script
+      command: python /tmp/monitor_jvm_heap.py
+      async: 3600
+      poll: 0
+
+    - name: Wait for the JVM monitoring script to finish
+      async_status:
+        jid: "{{ item.ansible_job_id }}"
+      register: job_result
+      until: job_result.finished
+      retries: 300
+      delay: 10
+      with_items:
+        - "{{ async_result.results }}"
