@@ -2,12 +2,12 @@
 - name: Copy jdk archive to host
   copy: 
     src: "/root/{{ jdk_installation_archive }}"
-    dest: "~/{{ jdk_installation_archive }}"
+    dest: "/tmp/{{ jdk_installation_archive }}"
     remote_src: yes
   args:
     force: no
 - name: Extract JDK archive
-  command: 'tar -xvf ~/{{ jdk_installation_archive }} -C {{ oracle_base }}'
+  command: 'tar -xvf /tmp/{{ jdk_installation_archive }} -C {{ oracle_base }}'
   args:
     creates: "{{ jdk_folder }}"
 - name: Change ownership of jdk folder
