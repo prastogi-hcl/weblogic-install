@@ -18,7 +18,7 @@
   shell: "nohup sh {{ domains_home }}/custom_domain/bin/startNodeManager.sh 2>&1 &"
   # tags:
   #  - start-nodemanager
-- name: Waiting for nodemanager to come up
-  wait_for: port=5556 delay=60 timeout=200
-  tags:
-    - start-nodemanager
+#- name: Waiting for nodemanager to come up
+#  wait_for: port=5556 delay=60 timeout=200
+#  tags:
+#    - start-nodemanager
