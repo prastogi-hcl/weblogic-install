@@ -10,10 +10,10 @@
 - name: Create boot properties file for managed server
   template: src=boot.properties dest={{ domain_home }}/servers/{{ managed_server_name }}/security/
 
-- name: Create security folder for managed server2
-  file: state=directory path={{ domains_home }}/{{ domain_name }}/servers/{{ ManagedServer2_Name }}/security
-- name: Create boot properties file for managed server2
-  template: src=boot.properties dest={{ domain_home }}/servers/{{ ManagedServer2_Name }}/security/
+#- name: Create security folder for managed server2
+#  file: state=directory path={{ domains_home }}/{{ domain_name }}/servers/{{ ManagedServer2_Name }}/security
+#- name: Create boot properties file for managed server2
+#  template: src=boot.properties dest={{ domain_home }}/servers/{{ ManagedServer2_Name }}/security/
 
 - name: Copy Start Managed Server Script
   template: src=start-managed-server.py dest={{ mw_installer_folder }}
