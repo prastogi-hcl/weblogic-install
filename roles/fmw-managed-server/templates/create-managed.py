@@ -40,15 +40,15 @@ cbean_name='/Clusters/'+'{{ClusterName}}'
 cmo.setCluster(getMBean(cbean_name))
 
 
-cd ('/')
-cmo.createServer('{{ ManagedServer2_Name }}')
+#cd ('/')
+#cmo.createServer('{{ ManagedServer2_Name }}')
 
-cd('/Servers/' + '{{ ManagedServer2_Name }}')
-cmo.setListenAddress('127.0.0.1')
-cmo.setListenPort({{ ManagedServer2_Port }})
-cmo.setMachine(getMBean('/Machines/' + '{{ server_hostname }}'))
-cbean_name='/Clusters/'+'{{ClusterName}}'
-cmo.setCluster(getMBean(cbean_name))
+#cd('/Servers/' + '{{ ManagedServer2_Name }}')
+#cmo.setListenAddress('127.0.0.1')
+#cmo.setListenPort({{ ManagedServer2_Port }})
+#cmo.setMachine(getMBean('/Machines/' + '{{ server_hostname }}'))
+#cbean_name='/Clusters/'+'{{ClusterName}}'
+#cmo.setCluster(getMBean(cbean_name))
 # Create Cluster
 # applyJRF(target='{{ managed_server_name }}', domainDir='{{ domain_home }}');
 
