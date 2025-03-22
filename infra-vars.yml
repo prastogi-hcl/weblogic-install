@@ -3,6 +3,7 @@ oracle_user: 'oracle'
 oracle_group: 'oinstall'
 # Software and configuration main directory
 oracle_base: '/oracle/fmw12c'
+sleep_interval: 60
 
 # JDK installer and target folder
 jdk_installation_archive: 'jdk-8u202-linux-x64.tar.gz'
